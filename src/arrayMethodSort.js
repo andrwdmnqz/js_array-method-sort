@@ -6,15 +6,7 @@
 function applyCustomSort() {
   [].__proto__.sort2 = function (
     compareFunction = (a, b) => {
-      if (String(a) > String(b)) {
-        return 1;
-      }
-
-      if (String(a) < String(b)) {
-        return -1;
-      }
-
-      return 0;
+      return a.toString() > b.toString();
     },
   ) {
     for (let i = 0; i < this.length; i++) {
